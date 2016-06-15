@@ -48,7 +48,7 @@ let twitterModule = (() => {
                 stream.on('data', tweet => {
                     console.log(separator);
                     addSpace();
-                    console.log(tweet.id, tweet.user.location);
+                    console.log(tweet.id, tweet.user.screen_name, tweet.user.location);
                     addSpace();
                     console.log(tweet.text);
                     addSpace();
