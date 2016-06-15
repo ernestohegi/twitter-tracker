@@ -65,4 +65,3 @@ let twitterModule = (() => {
 
 exports.initialize = twitterModule.initialize;
 exports.trackTweets = twitterModule.trackTweets;
-exports.replyToTweet = twitterModule.replyToTweet;

@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    div.header
+        h1= title
+        p Welcome to #{title}
+
+    div.twitter-container
+
+    script(src='/socket.io/socket.io.js')  
+    script(src='/scripts/socket-listener.js')

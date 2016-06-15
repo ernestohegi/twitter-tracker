@@ -4,6 +4,7 @@ const twitterClient         = require('./modules/twitter-module.js');
 const twitterCredentials    = require('./data/twitter-configuration.js');
 const argumentsParser       = require('./modules/arguments-parser-module.js');
 const consolePrinter        = require('./modules/console-printer-module.js');
+const io                    = require('socket.io')(8080);
 
 const track = argumentsParser.getArgumentValue('track');
 
@@ -17,12 +18,7 @@ twitterClient.initialize(
 twitterClient.trackTweets(
     track,
     tweet => {
-        consolePrinter.printWithSeparatorAndSpaces([
-            tweet.id,
-            tweet.user.screen_name,
-            tweet.user.location
-        ]);
-
-        consolePrinter.print(tweet.text);
+        consolePrinter.printWithSeparatorAndSpaces(tweet.id);
+        io.emit('tweet', tweet);
     }
 );
