@@ -28,31 +28,6 @@ let twitterModule = (() => {
 
     let isTwitterClientInitialized = (client) => (client === undefined) === false;
 
-    let replyToTweet = (tweet, message) => {
-        if (isTwitterClientInitialized(twitter) === false) {
-            throw 'Twitter client not iniliazed';
-            return false;
-        } else if (tweet === undefined || message === '') {
-            throw 'Nothing to reply';
-            return false;
-        }
-
-        twitter.post(
-            'statuses/update',
-            {
-                in_reply_to_status_id: tweet.id,
-                status: message
-            },
-            (error, tweet, response) => {
-                if (!error) {
-                    console.log(tweet.id);
-                } else {
-                    console.log(error);
-                }
-            }
-        );
-    };
-
     let trackTweets = (track) => {
         if (isTwitterClientInitialized(twitter) === false) {
             throw 'Twitter client not iniliazed';
@@ -89,8 +64,7 @@ let twitterModule = (() => {
 
     return {
         initialize,
-        trackTweets,
-        replyToTweet
+        trackTweets
     };
 })();
 
