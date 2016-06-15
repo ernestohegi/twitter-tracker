@@ -23,7 +23,7 @@ body {
     box-shadow: 0 -60px 70px 30px #000;
 }
 
-h1 {
+.twitter-tracker__title {
     font-size: 70px;
     text-align: center;
     margin: 0;
@@ -36,16 +36,21 @@ h1 {
     width: 100%;
 }
 
-.twitter-container div {
-    border-bottom: 2px dotted;
+.tweet-container {
+    border-bottom: 2px dotted #000;
     padding: 10px 0;
 }
 
-.twitter-container div:first-child {
+.twitter-container .tweet-container:first-child {
     padding: 10px 0;
     font-size: 18px;
+    color: #ff0095;
 }
 
-.twitter-container div:not(:first-child) {
-    color: #a5a5a5;
+.twitter-container .tweet-container:last-child {
+    border: none;
+}
+
+.twitter-container .tweet-container:not(:first-child) {
+    color: #000;
 }
