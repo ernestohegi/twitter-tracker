@@ -7,9 +7,6 @@ let twitterModule = (() => {
 
     let twitter;
 
-    const separator = '------';
-    const addSpace = () => console.log('');
-
     let initialize = (
         consumer_key,
         consumer_secret,
@@ -28,7 +25,7 @@ let twitterModule = (() => {
 
     let isTwitterClientInitialized = (client) => (client === undefined) === false;
 
-    let trackTweets = (track) => {
+    let trackTweets = (track, callback) => {
         if (isTwitterClientInitialized(twitter) === false) {
             throw 'Twitter client not iniliazed';
             return false;
@@ -46,17 +43,15 @@ let twitterModule = (() => {
             },
             stream => {
                 stream.on('data', tweet => {
-                    console.log(separator);
-                    addSpace();
-                    console.log(tweet.id, tweet.user.screen_name, tweet.user.location);
-                    addSpace();
-                    console.log(tweet.text);
-                    addSpace();
-                    addSpace();
+                    if (callback === undefined) {
+                        return tweet;
+                    }
+
+                    callback(tweet);
                 });
 
                 stream.on('error', error => {
-                    console.log(error);
+                    throw error;
                 });
             }
         );
