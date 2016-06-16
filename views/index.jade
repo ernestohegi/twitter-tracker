@@ -7,5 +7,8 @@ block content
 
     div.twitter-container
 
+    script.
+        var socketPort = #{socket_port};
+
     script(src='/socket.io/socket.io.js')  
     script(src='/scripts/socket-listener.js')

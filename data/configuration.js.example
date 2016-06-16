@@ -1,0 +1,5 @@
+'use strict';
+
+exports.socket = {
+    port: 8080
+};

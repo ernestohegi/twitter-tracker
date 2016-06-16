@@ -1,10 +1,11 @@
 'use strict';
 
-const twitterClient         = require('./modules/twitter-module.js');
-const twitterCredentials    = require('./data/twitter-configuration.js');
-const argumentsParser       = require('./modules/arguments-parser-module.js');
-const consolePrinter        = require('./modules/console-printer-module.js');
-const io                    = require('socket.io')(8080);
+const twitterClient         = require('./modules/twitter-module.js'),
+      twitterCredentials    = require('./data/twitter-configuration.js'),
+      configuration         = require('./data/configuration.js'),
+      argumentsParser       = require('./modules/arguments-parser-module.js'),
+      consolePrinter        = require('./modules/console-printer-module.js'),
+      io                    = require('socket.io')(configuration.socket.port);
 
 const track = argumentsParser.getArgumentValue('track');
 
