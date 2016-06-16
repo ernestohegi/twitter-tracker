@@ -54,3 +54,11 @@ body {
 .twitter-container .tweet-container:not(:first-child) {
     color: #000;
 }
+
+.tweet-link,
+.user-account-link {
+    color: #ff0095;
+    padding-right: 5px;
+    font-weight: bold;
+    text-decoration: none;
+}
