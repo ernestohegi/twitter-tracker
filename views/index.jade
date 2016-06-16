@@ -5,10 +5,11 @@ block content
         h1.twitter-tracker__title= title
         p.twitter-tracker__message Welcome to #{title}
 
-    div.twitter-container
+    ul.twitter-container
 
     script.
         var socketPort = #{socket_port};
 
     script(src='/socket.io/socket.io.js')  
+    script(src='/scripts/tweet-element-creator.js')
     script(src='/scripts/socket-listener.js')
