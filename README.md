@@ -3,7 +3,7 @@
 
 ## How to install and use
 
-- This project requires Node latest version installed.
+- This project requires Node's latest version installed.
 - Checkout the repository.
 - Run `npm install`.
 - Create a *twitter-configuration.js* file from the example one.
