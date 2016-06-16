@@ -14,13 +14,15 @@ body {
     justify-content: center;
     align-items: center;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background: #000;
+    color: #FFF;
 }
 
 .header {
     flex: 0 auto;
     width: 100%;
     text-align: center;
-    box-shadow: 0 -60px 70px 30px #000;
+    box-shadow: 0 -60px 70px 40px #f77dff;
 }
 
 .twitter-tracker__title {
@@ -37,7 +39,7 @@ body {
 }
 
 .tweet-container {
-    border-bottom: 2px dotted #000;
+    border-bottom: 2px dotted #4ede5f;
     padding: 10px 0;
     word-break: break-all;
     word-wrap: break-word;
@@ -54,7 +56,7 @@ body {
 }
 
 .twitter-container .tweet-container:not(:first-child) {
-    color: #000;
+    color: #FFF;
 }
 
 .tweet-link,
