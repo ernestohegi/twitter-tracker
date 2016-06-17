@@ -4,6 +4,7 @@
 ## How to install and use
 
 - This project requires Node's latest version installed.
+- Default ports are 3000 for the frontend and 8080 for the Twitter tracker.
 - Checkout the repository.
 - Run `npm install`.
 - Create a *twitter-configuration.js* file from the example one.
