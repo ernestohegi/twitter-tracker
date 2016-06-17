@@ -3,7 +3,7 @@ extends layout
 block content
     div.header
         h1.twitter-tracker__title= title
-        p.twitter-tracker__message Welcome to #{title}
+        p.twitter-tracker__message Tracking #[span.twitter-tracker__tracking ...]
 
     ul.twitter-container
 
@@ -12,4 +12,5 @@ block content
 
     script(src='/socket.io/socket.io.js')  
     script(src='/scripts/tweet-element-creator.js')
+    script(src='/scripts/interface-controller.js')
     script(src='/scripts/socket-listener.js')

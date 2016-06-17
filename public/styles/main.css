@@ -13,7 +13,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    font: 14px 'Open Sans', sans-serif;
     background: #000;
     color: #FFF;
 }
@@ -22,7 +22,8 @@ body {
     flex: 0 auto;
     width: 100%;
     text-align: center;
-    box-shadow: 0 -60px 70px 40px #f77dff;
+    box-shadow: 0 -78px 70px 40px #4ede5f;
+    font-family: 'Lucida Grande', Helvetica, Arial, sans-serif;
 }
 
 .twitter-tracker__title {
@@ -36,6 +37,7 @@ body {
     overflow-y: scroll;
     padding: 10px;
     width: 100%;
+    margin: 0;
 }
 
 .tweet-container {
@@ -46,7 +48,8 @@ body {
 }
 
 .twitter-container .tweet-container:first-child {
-    padding: 10px 0;
+    border: 2px dotted #4ede5f !important;
+    padding: 10px;
     font-size: 18px;
     color: #ff0095;
 }
@@ -65,4 +68,9 @@ body {
     padding-right: 5px;
     font-weight: bold;
     text-decoration: none;
+}
+
+.twitter-tracker__tracking {
+    font-weight: 700;
+    color: #ff0095;
 }

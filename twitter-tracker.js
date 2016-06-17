@@ -16,6 +16,11 @@ twitterClient.initialize(
     twitterCredentials.credentials.access_token_secret
 );
 
+io.on('connection', client => {
+    consolePrinter.printWithSeparatorAndSpaces('User connected');
+    io.emit('tweet.track', track);
+});
+
 twitterClient.trackTweets(
     track,
     tweet => {
